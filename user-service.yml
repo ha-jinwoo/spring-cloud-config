@@ -1,18 +1,18 @@
 spring:
-    datasource:
-        driver-class-name: org.h2.Driver
-        url: jdbc:h2:mem:testdb
-#        username: sa
-#        password: '{cipher}AQBt+2xOT6axMFffnsfXhAGRPQ43OefOwwAi7bYXqCj/1w2ECI6Pn7v08Eiin1HxSuDCTp/9BWtg0Q8NE9+l/4crRq6Zneth76fHSz4m35GpRqqC20WkUHbTsWzHwTaHo7PV0XYeMTiPTD08fciA5DS0rqOHHxF9hCc6zHPwJpiEV1+ffAFMinj5G+AM2ByotEiA0DPUqudXBZAlhjD8LUNY0ut/J06SCav7+WoPRVIoTmuxW1/m5Koyn9AOKIYIZabsUC5NNH3c0+cnyc012jvxZpPxkUdtuniTS7Y8zj8FzAqNEevxXgm3NkOPAHefcDM4l+yD+LDlXd112l0dS6bBgDhdfqnQb0tt4YCN6L4Sqe6fGoWip9SnBgQi8Covmv4='
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: '{cipher}AQCZN/aRG/8rkDp+hOUUl23fuqxUr+oxVi6g+/eHPt2qJMZNja/+wqmtYSwKhIP44qfZhpBBhoTG+9//9ZaI7gq7AAufnSxpxs+7QriIv2zJA3Olr+mYyoASG5heTxc+qTOSRNGOyFJgNutC+c1SUHF0k50fLUAIG7Tt/2uNR77Do+FtLqnbZ5FWkacAk+5ksQBbgKY9CvCpYoWGQuMcxyzBWFBZbgL/3fY5XlXQbVUQx3lkaDxeWSaHvvuairCkdJKTEsF89bGxwhAvejzVt9TIC8Ggu0i0qw1ylyRU1v617YdnFtpK1lUYvx2+yqHe47ljoG5vc/vB5tvmvDoF4VJUAa9HQy5373sbLRcn3MAFvl+QjPgMid4gQnPQu+hRpDw='
 
 token:
-  expiration_time: 864000000
-  secret: native_file_token_#2
+  expiration_time: 864000000 
+  secret: '{cipher}AQBt0HzFEnEnAT/D7HV8cWCzfP+i9tZfVR04Ns5IlgyWVS4hnEUA7kmVnRDhe2SyjF6EMXKVs+7cnetslM6Iq6Y/BjTQzdm91J0C5Q0x3CZqKV396oloOFubvFtmbcpTJK0kYaisuWOXi3ZUZ3aczfgSHF3bHExqEefVamF4rmDDkIffUi0D26xBhgtcvSgIAM45NwKt31ga9h7HNoatVR5HvmgRt5wJIeXgZVCL6929YGO61dBiHHOpjBQcUyXGkhmGip4Lz/nwtl4mtiJfR3MdfsxviP+TugtCVCXN4u3lk8C62A0Sox703dYHeBOGr2RnrrN7JnJNWPNzzfk4u7xWBPuVByRXuwJ0BVm9Zb4QnIvevn87NLbRWa+ZlPUKx5eubmt51Kh6UvXVO2GpK2qC'
 
 gateway:
-  ip: 192.168.35.37
-
+  ip: 172.18.0.5
+  
 order_service:
-  url: http://localhost:8000/order-service/%s/orders
+  url:  http://ORDER-SERVICE/order-service/%s/orders
   exception:
-    orders_is_empty: User's orders is empty.
+    orders_is_empty: There is no item.
